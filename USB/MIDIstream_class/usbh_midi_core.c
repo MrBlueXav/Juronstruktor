@@ -31,7 +31,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbh_midi_core.h"
 
-
 /*-----------------------------------------------------------------------------------------*/
 extern USB_OTG_CORE_HANDLE	USB_OTG_Core_dev  ;
 
@@ -52,7 +51,7 @@ static USBH_Status 	USBH_MIDI_ClassRequest(USB_OTG_CORE_HANDLE *pdev , void *pho
 static USBH_Status 	USBH_MIDI_Handle(USB_OTG_CORE_HANDLE *pdev , void *phost);
 
 
-/****************** MIDI interface ****************************/
+/****************** MIDI interface *********************************************************/
 
 USBH_Class_cb_TypeDef  MIDI_cb =
 {
@@ -241,13 +240,10 @@ static USBH_Status USBH_MIDI_Handle(USB_OTG_CORE_HANDLE *pdev ,
 		default:
 			break;
 		}
-
 	}
-
 	return status;
-
-
 }
+
 /*-----------------------------------------------------------------------------------------*/
 /* look up a MIDI message size from spec */
 /*Return */
